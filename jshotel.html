@@ -1,20 +1,13 @@
 <!-- Create a nice hotel welcome page.
-
-"Welcome to the JS Hotel" = h1
-"Code All Night, Sleep All Day!" = p
-
-dropdown list of available rooms (101 - 105)
-
-Amenities drop down list of things (Breakfast, Swimming Pool, Spa)
-
 Hacker Level Challenge:
-
 Create a js file and create an object for the hotel with the following properties. Change the slogan and change the dropdown list of rooms to be equal to 210, 211, 212
 -->
 
 <!DOCTYPE html>
   <head>
     <title>jshotel</title>
+    <style>
+    </style>
   </head>
 
   <body>
@@ -23,24 +16,23 @@ Create a js file and create an object for the hotel with the following propertie
       <p class="slogan">Code All Night, Sleep All Day!</p>
 
       <p>Available Rooms:</p>
-      <select name="rooms">
-          <option>101</option>
-          <option>102</option>
-          <option>103</option>
-          <option>104</option>
-          <option>105</option>
+      <select class="rooms">
+          <option value="101">101</option>
+          <option value="102">102</option>
+          <option value="103">103</option>
+          <option value="104">104</option>
+          <option value="105">105</option>
       </select>
 
       <p>Amenities Included:</p>
-    <select name="amenities">
-        <option>Breakfast</option>
-        <option>Swimming Pool</option>
-        <option>Spa</option>
-        <option>Private Beach Access</option>
+    <select class="amenities">
+        <option value="breakfast">Breakfast</option>
+        <option value="pool">Swimming Pool</option>
+        <option value="spa">Spa</option>
+        <option value="beach">Private Beach Access</option>
     </select>
 
-    <script>
-      document.getElementsByClassName('slogan').innerText = 'SLEEP ALL DAY. SLEEP ALL NIGHT.';
+    <script src="jshotel.js">
     </script>
 
   </body>
