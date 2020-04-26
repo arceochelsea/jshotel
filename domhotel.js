@@ -13,28 +13,4 @@ linesOfHtml = linesOfHtml + "</select>";
 
 console.log(linesOfHtml);
 
-// let linesOfHtmlTwo = "<select>";
-// linesOfHtmlTwo = linesOfHtmlTwo + `<option value='${availableRooms[1]}'>${availableRooms[1]}</option>`;
-// linesOfHtmlTwo = linesOfHtmlTwo + "</select>";
-
-// console.log(linesOfHtmlTwo);
-
-// let linesOfHtmlThree = "<select>";
-// linesOfHtmlThree = linesOfHtmlThree + `<option value='${availableRooms[2]}'>${availableRooms[2]}</option>`;
-// linesOfHtmlThree = linesOfHtmlThree + "</select>";
-
-// console.log(linesOfHtmlThree);
-
-// let linesOfHtmlFour = "<select>";
-// linesOfHtmlFour = linesOfHtmlFour + `<option value='${availableRooms[2]}'>${availableRooms[2]}</option>`;
-// linesOfHtmlFour = linesOfHtmlFour + "</select>";
-
-// console.log(linesOfHtmlFour);
-
-// for (let i = 0; i < availableRooms.length; i++) {
-//     if (availableRooms[i] < 105) {
-//         console.log(linesOfHtml);
-//     }
-// }
-
 document.getElementById('AvailRoomList').innerHTML = linesOfHtml;
