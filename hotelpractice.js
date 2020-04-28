@@ -10,11 +10,12 @@ let bookingDetails = {
     bookRoom: function () {
         this.bookedRooms[0].push(this.availableRooms[0].pop()); //removing available room from array & pushing it to booked rooms array
         this.updateAvailableRooms(); //call on the next function to update the dropdown
+
     },
 
     checkOutRoom: function () {
-        this.checkedOutRooms[0].push(this.bookedRooms[0].pop());//removing booked room from array & pushing it to checked out rooms array
-        this.updateAvailableRooms(); //call on the next function to update the dropdown
+        this.bookedRooms[0].push(this.bookedRooms[0].pop());//removing bookedroom from array & pushing it to availablerooms array
+        this.updateUnbookRooms(); //call on the next function to update the dropdown
     }, 
 
     updateAvailableRooms: function () {
@@ -26,9 +27,21 @@ let bookingDetails = {
         }
         linesOfHtml = linesOfHtml + "</select>";
         document.getElementById('dropdownavaliablerooms').innerHTML = linesOfHtml;
+    },
+
+    updateUnbookRooms: function () {
+    let linesOfHtmlTwo = "<select>";
+    for (let i = 0; i < this.availableRooms.length; i++) {
+        for (let j = 0; j < this.availableRooms[i].length; j++) {
+            linesOfHtmlTwo = linesOfHtmlTwo + `<option value="${this.bookedRooms[i][j]}">${this.bookedRooms[i][j]}</option>`;
+            }
+        }
+        linesOfHtmlTwo = linesOfHtmlTwo + "</select>";    
+        document.getElementById('dropdownbookedrooms').innerHTML = linesOfHtmlTwo;
     }
 }
 
 bookingDetails.updateAvailableRooms();
+bookingDetails.updateUnbookRooms();
 bookingDetails.bookRoom();
 bookingDetails.checkOutRoom();
