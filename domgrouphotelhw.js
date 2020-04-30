@@ -1,5 +1,6 @@
 document.getElementById("hotelName").innerText = "DOM Hotel";
 document.getElementById("slogan").innerText = "Where guests can CODE all night";
+
 let hotel = {
   availableRooms: [ [101, 102, 103, 104], [201, 202, 203, 204], [301, 302, 303], [401, 402] ],
   roomTypes: ["Single", "Double", "King", "Queen"],
@@ -13,8 +14,7 @@ let hotel = {
   },
 
   bookSelectedRoom: function () {
-    let selectedRoom = parseInt(
-      document.getElementById("availableSelect").value);
+    let selectedRoom = parseInt(document.getElementById("availableSelect").value);
     console.log(selectedRoom);
     for (let i = 0; i < this.availableRooms.length; i++) {
       for (let j = 0; j < this.availableRooms[i].length; j++) {
@@ -28,8 +28,7 @@ let hotel = {
   },
 
   unBookSelectedRoom: function () {
-    let selectedRoom = parseInt(
-      document.getElementById("unBookedSelect").value);
+    let selectedRoom = parseInt(document.getElementById("unBookedSelect").value);
     console.log(selectedRoom);
     for (let i = 0; i < this.bookedRooms.length; i++) {
       for (let j = 0; j < this.bookedRooms[i].length; j++) {
